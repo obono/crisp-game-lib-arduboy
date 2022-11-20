@@ -10,6 +10,14 @@ A customized version of [crisp-game-lib-portable](https://github.com/abagames/cr
 
 ![Survivor](docs/img/survivor_animation.gif)
 
+### [Pin Climb](cglabPinClimb/)
+
+![Pin Climb](docs/img/pin_climb_animation.gif)
+
+### [Ball Tour](cglabBallTour/)
+
+![Ball Tour](docs/img/ball_tour_animation.gif)
+
 ### Common Operation
 
 * Press down to toggle sound on/off in title screen.
