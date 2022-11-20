@@ -6,7 +6,7 @@ A customized version of [crisp-game-lib-portable](https://github.com/abagames/cr
 
 ## Available Games
 
-### [Survivor](survivor/)
+### [Survivor](cglabSurvivor/)
 
 ![Survivor](docs/img/survivor_animation.gif)
 
@@ -17,8 +17,8 @@ A customized version of [crisp-game-lib-portable](https://github.com/abagames/cr
 
 ## How to build
 
-1. [Setup Arduboy developing environment](https://www.arduboy.com/quick-start#programming)
-    * Sketches in this repository depend on only [Arduboy2 library](https://github.com/MLXXXp/Arduboy2)
+1. [Setup Arduboy developing environment](https://www.arduboy.com/quick-start#programming).
+    * Sketches in this repository depend on only [Arduboy2 library](https://github.com/MLXXXp/Arduboy2).
 2. Copy [./lib/*](lib/) files to the directory you want to build.
 3. Verify and upload *.ino file.
 

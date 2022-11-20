@@ -114,7 +114,7 @@ EXTERNC void setupGame(const char *title, const char *description,
                        const CharacterData *characters, void (*update)(void),
                        const uint8_t **sounds);
 EXTERNC void initGame(void);
-EXTERNC void updateFrame(void);
+EXTERNC bool updateGame(void);
 /// \endcond
 
 //! Iterate over an `array` with variable `index`

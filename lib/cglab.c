@@ -720,6 +720,7 @@ void setupGame(const char *_title,
 
 //! Initialize game.
 void initGame(void) {
+  md_initMachine();
   initScore();
   initParticle();
   parseDescription();
@@ -729,9 +730,11 @@ void initGame(void) {
   ticks = 0;
 }
 
-//! Update game frames every 1/60 second.
-//! This function must be called from the machine dependent update step.
-void updateFrame(void) {
+//! Update game frames if it's every 1/60 second timing.
+bool updateGame(void) {
+  if (!md_nextFrame()) {
+    return false;
+  }
   hitBoxesIndex = 0;
   difficulty = (float)ticks / 60 / FPS + 1;
   updateInput();
@@ -745,4 +748,6 @@ void updateFrame(void) {
   updateSound();
   drawScore();
   ticks++;
+  md_refresh();
+  return true;
 }
