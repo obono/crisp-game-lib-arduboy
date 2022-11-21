@@ -1,0 +1,68 @@
+{
+	"repository": "Games with crisp-game-lib-arduboy",
+	"api-version": "1.0",
+	"maintainer": "OBONO",
+	"website": "https://github.com/obono/crisp-game-lib-arduboy",
+	"items": [
+		{
+			"title": "Survivor",
+			"genre": "Action",
+			"author": "OBONO",
+			"binaries": [
+				{
+					"title": "Survivor",
+					"filename": "https://raw.githubusercontent.com/obono/crisp-game-lib-arduboy/main/_hexs/cglabSurvivor.hex",
+					"device": "Arduboy"
+				}
+			],
+			"screenshots": [
+				{
+					"filename": "https://obono.github.io/crisp-game-lib-arduboy/img/survivor_screenshot.gif",
+					"title": "Game screen"
+				}
+			],
+			"license": "MIT",
+			"arduboy": ""
+		},
+		{
+			"title": "Pin Climb",
+			"genre": "Action",
+			"author": "OBONO",
+			"binaries": [
+				{
+					"title": "Pin Climb",
+					"filename": "https://raw.githubusercontent.com/obono/crisp-game-lib-arduboy/main/_hexs/cglabPinClimb.hex",
+					"device": "Arduboy"
+				}
+			],
+			"screenshots": [
+				{
+					"filename": "https://obono.github.io/crisp-game-lib-arduboy/img/pin_climb_screenshot.gif",
+					"title": "Game screen"
+				}
+			],
+			"license": "MIT",
+			"arduboy": ""
+		},
+		{
+			"title": "Ball Tour",
+			"genre": "Action",
+			"author": "OBONO",
+			"binaries": [
+				{
+					"title": "Ball Tour",
+					"filename": "https://raw.githubusercontent.com/obono/crisp-game-lib-arduboy/main/_hexs/cglabBallTour.hex",
+					"device": "Arduboy"
+				}
+			],
+			"screenshots": [
+				{
+					"filename": "https://obono.github.io/crisp-game-lib-arduboy/img/ball_tour_screenshot.gif",
+					"title": "Game screen"
+				}
+			],
+			"license": "MIT",
+			"arduboy": ""
+		}
+	]
+}

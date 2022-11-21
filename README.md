@@ -6,6 +6,8 @@ A customized version of [crisp-game-lib-portable](https://github.com/abagames/cr
 
 ## Available Games
 
+[Play games on the emulator.](https://obono.github.io/crisp-game-lib-arduboy/repo_viewer.html)
+
 ### [Survivor](cglabSurvivor/)
 
 ![Survivor](docs/img/survivor_animation.gif)
