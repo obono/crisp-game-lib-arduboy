@@ -32,7 +32,9 @@ A customized version of [crisp-game-lib-portable](https://github.com/abagames/cr
 
 ## Code reference
 
-:construction: Under construction...
+* [Functions and variables](https://obono.github.io/crisp-game-lib-arduboy/ref_document/cglab_8c.html)
+* [Structs and macros](https://obono.github.io/crisp-game-lib-arduboy/ref_document/cglab_8h.html)
+* [2d vector functions](https://obono.github.io/crisp-game-lib-arduboy/ref_document/vector_8c.html) ([macros](https://obono.github.io/crisp-game-lib-arduboy/ref_document/vector_8h.html))
 
 ## License
 

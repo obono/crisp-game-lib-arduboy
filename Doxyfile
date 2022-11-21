@@ -1,0 +1,28 @@
+PROJECT_NAME           = crisp-game-lib-arduboy
+OUTPUT_DIRECTORY       = ./docs
+FULL_PATH_NAMES        = NO
+INLINE_SIMPLE_STRUCTS  = YES
+
+EXTRACT_ALL            = YES
+SHOW_INCLUDE_FILES     = NO
+GENERATE_TODOLIST      = NO
+GENERATE_TESTLIST      = NO
+GENERATE_BUGLIST       = NO
+GENERATE_DEPRECATEDLIST= NO
+
+INPUT                  = lib/cglab.c lib/cglab.h lib/vector.c lib/vector.h
+EXAMPLE_PATTERNS       = *
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = ref_document
+SEARCHENGINE           = NO
+
+GENERATE_LATEX         = NO
+GENERATE_RTF           = NO
+GENERATE_MAN           = NO
+GENERATE_XML           = NO
+GENERATE_DOCBOOK       = NO
+GENERATE_AUTOGEN_DEF   = NO
+
+SEARCH_INCLUDES        = NO
+CLASS_GRAPH            = NO
