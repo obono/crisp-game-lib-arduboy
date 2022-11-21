@@ -111,8 +111,8 @@ EXTERNC void disableSound(void);
 EXTERNC void toggleSound(void);
 
 EXTERNC void setupGame(const char *title, const char *description,
-                       const CharacterData *characters, void (*update)(void),
-                       const uint8_t **sounds);
+                       const CharacterData *characters, const uint8_t **sounds,
+                       void (*update)(void));
 EXTERNC void initGame(void);
 EXTERNC bool updateGame(void);
 /// \endcond

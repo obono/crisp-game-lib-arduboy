@@ -38,8 +38,8 @@ static uint8_t state;
 static const char *title;
 static const char *description;
 static const CharacterData *characters;
-static void (*update)(void);
 static const uint8_t **sounds;
+static void (*update)(void);
 
 // Collision
 /// \cond
@@ -431,13 +431,14 @@ static uint16_t hiScore;
 
 /// \cond
 typedef struct {
-  int8_t value;
-  uint16_t halfX:6;
-  uint16_t halfY:5;
-  uint16_t ticks:5;
+  uint32_t value:14;
+  uint32_t x:7;
+  uint32_t y:6;
+  uint32_t ticks:5;
 } ScoreBoard;
 
 #define MAX_SCORE_BOARD_COUNT 4
+#define SCORE_VALUE_OFFSET 5000
 /// \endcond
 static ScoreBoard scoreBoards[MAX_SCORE_BOARD_COUNT];
 static uint8_t scoreBoardsIndex;
@@ -456,15 +457,16 @@ static void updateScoreBoards(void) {
   for (uint8_t i = 0; i < MAX_SCORE_BOARD_COUNT; i++) {
     ScoreBoard *sb = &scoreBoards[i];
     if (sb->ticks > 0) {
-      char sc[5];
-      bool isPositive = sb->value >= 0;
-      uint8_t ll = sprintf(sc + isPositive, "%d", sb->value);
+      char sc[6];
+      int16_t value = sb->value - SCORE_VALUE_OFFSET;
+      bool isPositive = value >= 0;
+      uint8_t ll = sprintf(sc + isPositive, "%d", value);
       if (isPositive) {
         sc[0] = '+';
         ll++;
       }
-      float x = sb->halfX * 2 - (ll - 1) * CHARACTER_WIDTH / 2;
-      float y = sb->halfY * 2 + sb->ticks * sb->ticks / 45.0f;
+      float x = sb->x - (ll - 1) * CHARACTER_WIDTH / 2;
+      float y = sb->y + sb->ticks * sb->ticks / 45.0f;
       drawCharacters(sc, x, y, false, true);
       sb->ticks--;
     }
@@ -480,14 +482,14 @@ void addScore(float value, float x, float y) {
   } else {
     score += value;
   }
-  if (value >= INT8_MAX || value < INT8_MIN) {
+  if (value >= 10000 || value < -SCORE_VALUE_OFFSET) {
     return;
   }
   ScoreBoard *sb = &scoreBoards[scoreBoardsIndex];
-  sb->halfX = (uint8_t)clamp(x, 0, 127) / 2;
+  sb->x = clamp(x, 0, VIEW_SIZE_X - 1);
   y -= 20;
-  sb->halfY = (uint8_t)clamp(y, 0, 63) / 2;
-  sb->value = value;
+  sb->y = clamp(y, 0, VIEW_SIZE_Y - 1);
+  sb->value = value + SCORE_VALUE_OFFSET;
   sb->ticks = 30;
   scoreBoardsIndex++;
   if (scoreBoardsIndex >= MAX_SCORE_BOARD_COUNT) {
@@ -709,13 +711,13 @@ void gameOver(void) {
 void setupGame(const char *_title,
                const char *_description,
                const CharacterData *_characters,
-               void (*_update)(void),
-               const uint8_t **_sounds) {
+               const uint8_t **_sounds,
+               void (*_update)(void)) {
   title = _title;
   description = _description;
   characters = _characters;
-  update = _update;
   sounds = _sounds;
+  update = _update;
 }
 
 //! Initialize game.

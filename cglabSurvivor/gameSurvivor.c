@@ -246,5 +246,5 @@ static void update() {
 }
 
 void setupGameSurvivor(void) {
-  setupGame(title, description, characters, update, soundPatterns);
+  setupGame(title, description, characters, soundPatterns, update);
 }

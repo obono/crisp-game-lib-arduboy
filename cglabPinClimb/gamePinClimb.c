@@ -90,5 +90,5 @@ static void update() {
 }
 
 void setupGamePinClimb() {
-  setupGame(title, description, NULL, update, soundPatterns);
+  setupGame(title, description, NULL, soundPatterns, update);
 }
