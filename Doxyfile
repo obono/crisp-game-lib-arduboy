@@ -4,6 +4,7 @@ FULL_PATH_NAMES        = NO
 INLINE_SIMPLE_STRUCTS  = YES
 
 EXTRACT_ALL            = YES
+SHOW_HEADERFILE        = NO
 SHOW_INCLUDE_FILES     = NO
 GENERATE_TODOLIST      = NO
 GENERATE_TESTLIST      = NO
@@ -11,7 +12,6 @@ GENERATE_BUGLIST       = NO
 GENERATE_DEPRECATEDLIST= NO
 
 INPUT                  = lib/cglab.c lib/cglab.h lib/vector.c lib/vector.h
-EXAMPLE_PATTERNS       = *
 
 GENERATE_HTML          = YES
 HTML_OUTPUT            = ref_document

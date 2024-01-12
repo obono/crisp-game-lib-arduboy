@@ -63,6 +63,26 @@
 			],
 			"license": "MIT",
 			"arduboy": ""
+		},
+		{
+			"title": "Paku Paku",
+			"genre": "Action",
+			"author": "OBONO",
+			"binaries": [
+				{
+					"title": "Paku Paku",
+					"filename": "https://raw.githubusercontent.com/obono/crisp-game-lib-arduboy/main/_hexs/cglabPakuPaku.hex",
+					"device": "Arduboy"
+				}
+			],
+			"screenshots": [
+				{
+					"filename": "https://obono.github.io/crisp-game-lib-arduboy/img/paku_paku_screenshot.gif",
+					"title": "Game screen"
+				}
+			],
+			"license": "MIT",
+			"arduboy": ""
 		}
 	]
 }

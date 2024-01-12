@@ -20,6 +20,10 @@ A customized version of [crisp-game-lib-portable](https://github.com/abagames/cr
 
 ![Ball Tour](docs/img/ball_tour_animation.gif)
 
+### [Paku Paku](cglabPakuPaku/)
+
+![Paku Paku](docs/img/paku_paku_animation.gif)
+
 ### Common Operation
 
 * Press down to toggle sound on/off in title screen.
